@@ -32,5 +32,5 @@ jobs:
       - name: run build command
         run: npm run build
 
-
-
+      - name: zip up current dir
+        run: zip -r mgc-ui.zip .
