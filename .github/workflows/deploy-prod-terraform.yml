@@ -80,6 +80,15 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check
 
+    - name: install deps
+      run: npm ci
+
+    - name: run test command
+      run: npm run test
+
+    - name: run build command
+      run: npm run build
+
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan
