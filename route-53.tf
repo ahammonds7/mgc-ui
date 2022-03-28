@@ -7,12 +7,12 @@ resource "aws_route53_zone" "mgc-ui_zone" {
 }
 
 resource "aws_acm_certificate" "mgc-ui_cert" {
-  domain_name       = local.domain_name
+  domain_name               = local.domain_name
   subject_alternative_names = ["*.${local.domain_name}"]
-  validation_method = "DNS"
+  validation_method         = "DNS"
 
   tags = {
-    Name: local.domain_name
+    Name : local.domain_name
   }
 
   lifecycle {
@@ -21,7 +21,7 @@ resource "aws_acm_certificate" "mgc-ui_cert" {
 }
 
 resource "aws_acm_certificate_validation" "validation" {
-  certificate_arn = aws_acm_certificate.mgc-ui_cert.arn
+  certificate_arn         = aws_acm_certificate.mgc-ui_cert.arn
   validation_record_fqdns = [for record in aws_route53_record.mgc-ui_record : record.fqdn]
 }
 
@@ -54,7 +54,7 @@ resource "aws_route53_record" "mgc-ui_record" {
 #}
 
 output "s3_website_endpoint" {
-  value = "${aws_s3_bucket.mgc-ui_bucket.website_endpoint}"
+  value = aws_s3_bucket.mgc-ui_bucket.website_endpoint
 }
 
 #output "route53_domain" {
@@ -62,5 +62,5 @@ output "s3_website_endpoint" {
 #}
 
 output "cdn_domain" {
-  value = "${aws_cloudfront_distribution.mgc-ui_distribution.domain_name}"
+  value = aws_cloudfront_distribution.mgc-ui_distribution.domain_name
 }
