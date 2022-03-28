@@ -31,7 +31,8 @@ jobs:
       run: terraform init
 
     - name: ECHO
-      run: $AWS_ACCESS_KEY_ID && echo "AWS_ACCESS_KEY_ID is set"
+      run: $AWS_ACCESS_KEY_ID && echo "$AWS_ACCESS_KEY_ID is set"
+
     - name: install deps
       run: npm ci
 
