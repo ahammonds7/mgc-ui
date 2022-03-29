@@ -1,5 +1,5 @@
 module "deploy-prod" {
-  source = "./deploy-modules"
+  source = "../modules"
   DEPLOY_ENV = "prod"
   URL_PREFIX = ""
 }

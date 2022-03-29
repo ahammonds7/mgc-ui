@@ -1,5 +1,5 @@
 module "deploy-qa" {
-  source = "./deploy-modules"
+  source = "../modules"
   DEPLOY_ENV = "qa"
   URL_PREFIX = "qa."
 }

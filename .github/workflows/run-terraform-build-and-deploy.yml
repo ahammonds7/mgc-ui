@@ -35,10 +35,6 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-      - name: Terraform Init
-        run: terraform init
-
       - name: install deps
         run: npm ci
 
@@ -48,10 +44,20 @@ jobs:
       - name: run build command
         run: npm run build
 
+      - name: move into env dir
+        run: cd deploy/${{env.DEPLOY_ENV}}
+
+      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+      - name: Terraform Init
+        run: terraform init
+
         # On push to master, build or change infrastructure according to Terraform configuration files
         # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
       - name: Terraform Apply
-        run: terraform apply -auto-approve -target=module.deploy-${{env.DEPLOY_ENV}}
+        run: terraform apply -auto-approve
+
+      - name: moving back up to root dir
+        run: cd ../..
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Committing state changes
