@@ -8,8 +8,8 @@ jobs:
     name: 'Run Build and Deploy'
     uses: ./.github/workflows/run-terraform-build-and-deploy.yml
     with:
-      DEPLOY_ENV: 'prod'
+      DEPLOY_ENV: prod
     secrets:
-      AWS_ACCESS_KEY_ID: secret.AWS_ACCESS_KEY_ID
-      AWS_SECRET_ACCESS_KEY: secret.AWS_SECRET_ACCESS_KEY
-      AWS_REGION: secret.AWS_REGION
+      AWS_ACCESS_KEY_ID: "${secret.AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY: "${secret.AWS_SECRET_ACCESS_KEY}"
+      AWS_REGION: "${secret.AWS_REGION}"
