@@ -12,6 +12,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "mgc-tf-state"
+    region = "us-east-1"
+    key = "./prod"
+  }
+}
+
 module "deploy-prod" {
   source = "../modules"
   DEPLOY_ENV = "prod"
