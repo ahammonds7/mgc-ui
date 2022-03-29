@@ -14,9 +14,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "tf-state-prod"
-    key = "/"
-    region = 'us-east-1'
+    bucket = "mgc-tf-state"
+    region = "us-east-1"
+    key = "./qa"
   }
 }
 
