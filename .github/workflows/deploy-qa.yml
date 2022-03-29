@@ -1,0 +1,13 @@
+name: 'Deploy to QA'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    name: 'Run Build and Deploy'
+    uses: ./.github/workflows/run-terraform-build-and-deploy.yml
+    with:
+      DEPLOY_ENV: qa

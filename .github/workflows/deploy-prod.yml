@@ -1,0 +1,11 @@
+name: 'Deploy to Production'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: 'Run Build and Deploy'
+    uses: ./.github/workflows/run-terraform-build-and-deploy.yml
+    with:
+      DEPLOY_ENV: prod

@@ -1,5 +1,5 @@
 locals {
-  domain_name = "magnoliagrovecreations.com"
+  domain_name = "${var.URL_PREFIX}magnoliagrovecreations.com"
 }
 
 resource "aws_route53_zone" "mgc-ui_zone" {
@@ -67,10 +67,6 @@ resource "aws_route53_record" "mgc-ui_record_AAAA" {
 output "s3_website_endpoint" {
   value = aws_s3_bucket.mgc-ui_bucket.website_endpoint
 }
-
-#output "route53_domain" {
-#  value = "${aws_route53_record.mgc-ui_record.fqdn}"
-#}
 
 output "cdn_domain" {
   value = aws_cloudfront_distribution.mgc-ui_distribution.domain_name

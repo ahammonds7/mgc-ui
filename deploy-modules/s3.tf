@@ -4,7 +4,7 @@ locals {
 
 resource "aws_s3_bucket" "mgc-ui_bucket" {
   force_destroy = "true"
-  bucket        = "mgc-prod-ui"
+  bucket        = "mgc-${var.DEPLOY_ENV}-ui"
 }
 
 resource "aws_s3_object" "mgc-ui_object" {

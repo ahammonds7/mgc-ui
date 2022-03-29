@@ -16,7 +16,7 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
     }
   }
 
-  aliases = ["${local.domain_name}"]
+  aliases = [local.domain_name]
 
   enabled             = true
   is_ipv6_enabled     = true
@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
   }
 
   tags = {
-    Environment = "production"
+    Environment = var.DEPLOY_ENV
   }
 
   viewer_certificate {
