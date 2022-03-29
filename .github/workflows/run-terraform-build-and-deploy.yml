@@ -6,9 +6,13 @@ on:
       DEPLOY_ENV:
         required: true
         type: string
-      URL_PREFIX:
+    secrets:
+      AWS_ACCESS_KEY_ID:
         required: true
-        type: string
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+      AWS_REGION:
+        required: true
 
 jobs:
   build-and-deploy:
@@ -24,7 +28,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
       TF_VAR_DEPLOY_ENV: ${{ inputs.DEPLOY_ENV }}
-      TF_VAR_URL_PREFIX: ${{ inputs.URL_PREFIX }}
     steps:
       # Checkout the repository to the GitHub Actions runner
       - name: Checkout
