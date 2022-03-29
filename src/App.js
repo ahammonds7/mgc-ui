@@ -6,9 +6,6 @@ function App() {
       <header className="App-header">
         Magnolia Grove Creations
       </header>
-      <div>
-        More Comming Soon...
-      </div>
     </div>
   );
 }
