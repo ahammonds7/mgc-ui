@@ -47,3 +47,9 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: terraform apply -auto-approve
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      name: Committing state changes
+      if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      with:
+        commit_message: Committing state changes
