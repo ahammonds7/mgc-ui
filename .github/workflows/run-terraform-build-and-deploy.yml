@@ -1,4 +1,4 @@
-name: "Deploying to ${{DEPLOY_ENV}}"
+name: "deploy-worker"
 
 on:
   workflow_call:
