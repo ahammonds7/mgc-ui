@@ -19,10 +19,3 @@ resource "aws_s3_object" "mgc-ui_object" {
 output "fileset-results" {
   value = fileset("${path.module}/build", "**/*")
 }
-
-#resource "aws_s3_bucket_website_configuration" "mgc-ui_website" {
-#  bucket = aws_s3_bucket.mgc-ui_bucket.bucket
-#  index_document {
-#    suffix = "index.html"
-#  }
-#}
