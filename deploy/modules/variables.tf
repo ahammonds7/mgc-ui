@@ -9,3 +9,8 @@ variable "URL_PREFIX" {
   nullable  = true
   description = "The prefix for the url (should be blank for prod)"
 }
+
+locals {
+  s3_origin_id = "mgc-ui-origin-id"
+  domain_name = "${var.URL_PREFIX}magnoliagrovecreations.com"
+}

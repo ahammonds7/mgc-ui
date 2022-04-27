@@ -1,7 +1,3 @@
-locals {
-  s3_origin_id = "mgc-ui-origin-id"
-}
-
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "cloudfront-mgc-ui-origin"
 }
@@ -88,4 +84,8 @@ resource "aws_s3_bucket_public_access_block" "cf_s3_bucket_acl" {
   block_public_policy = true
   //ignore_public_acls      = true
   //restrict_public_buckets = true
+}
+
+output "mgc-ui_distribution" {
+  value = aws_cloudfront_distribution.mgc-ui_distribution
 }
