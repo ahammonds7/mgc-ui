@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn = aws_acm_certificate_validation.validation.certificate_arn
+    acm_certificate_arn = data.aws_acm_certificate.mgc.arn
     ssl_support_method  = "sni-only"
   }
 }
