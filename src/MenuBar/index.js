@@ -1,9 +1,11 @@
 import AppBarMui from '@mui/material/AppBar'
 import styled from "@emotion/styled"
+import CleanLink from '../common/CleanLink'
+import { route as homeRoute } from '../Home'
+import { route as productsRoute } from '../Products'
+import { route as aboutUsRoute } from '../AboutUs'
 
-const AppBar = styled(AppBarMui)`
-
-`
+const AppBar = styled(AppBarMui)``
 
 const Toolbar = styled.div`
   background-color: white;
@@ -35,13 +37,14 @@ const MenuBar = () => {
   return (<>
     <AppBar position={'static'}>
       <Toolbar>
-        <Title>Magnolia Grove Creations</Title>
+        <CleanLink to={homeRoute}>
+          <Title>Magnolia Grove Creations</Title>
+        </CleanLink>
       </Toolbar>
       <NavBar>
-        <div>Home</div>
-        <div>Products</div>
-        <div>Collections</div>
-        <div>About Us</div>
+        <CleanLink to={homeRoute}>Home</CleanLink>
+        <CleanLink to={productsRoute}>Products</CleanLink>
+        <CleanLink to={aboutUsRoute}>About Us</CleanLink>
       </NavBar>
     </AppBar>
   </>)
