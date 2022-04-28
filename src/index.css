@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: AltaRegular;
+  src: local('AltaRegular'),
+    url('./fonts/Alta/Alta_regular.otf') format('truetype');
+  font-weight: normal;
+}

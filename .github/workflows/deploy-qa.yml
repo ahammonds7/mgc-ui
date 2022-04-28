@@ -3,7 +3,8 @@ name: 'Deploy to QA'
 on:
   push:
     branches:
-      - master
+      - develop
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:

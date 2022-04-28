@@ -13,6 +13,7 @@ resource "aws_s3_object" "mgc-ui_object" {
   bucket       = aws_s3_bucket.mgc-ui_bucket.bucket
   key          = each.value
   source       = "${path.module}/../../build/${each.value}"
+  etag         = filemd5("${path.module}/../../build/${each.value}")
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.value), null)
 }
 
