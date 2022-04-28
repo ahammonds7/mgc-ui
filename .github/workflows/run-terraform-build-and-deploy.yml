@@ -38,13 +38,16 @@ jobs:
       - name: run test command
         run: npm run test
 
-      - name: run update version (nonprod)
+      - name: run update version
         run: npm version patch --no-git-tag-version
-        if: inputs.DEPLOY_ENV != 'prod'
 
-      - name: run update version (prod)
-        run: npm version patch
-        if: inputs.DEPLOY_ENV == 'prod'
+#      - name: run update version (nonprod)
+#        run: npm version patch --no-git-tag-version
+#        if: inputs.DEPLOY_ENV != 'prod'
+#
+#      - name: run update version (prod)
+#        run: npm version patch
+#        if: inputs.DEPLOY_ENV == 'prod'
 
       - name: run build command
         run: npm run build
