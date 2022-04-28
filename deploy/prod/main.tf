@@ -15,8 +15,8 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "mgc-tf-state"
-    region = "us-east-1"
     key = "./prod"
+    region = "us-east-1"
   }
 }
 
