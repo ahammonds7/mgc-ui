@@ -1,4 +1,5 @@
 body {
+  background-color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,5 +17,19 @@ code {
   font-family: AltaRegular;
   src: local('AltaRegular'),
     url('./fonts/Alta/Alta_regular.otf') format('truetype');
-  font-weight: normal;
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: AltaLight;
+  src: local('AltaLight'),
+    url('./fonts/Alta/Alta_light.otf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: AltaCaption;
+  src: local('AltaCaption'),
+    url('./fonts/Alta/Alta_caption.otf') format('truetype');
+  font-weight: auto;
 }
