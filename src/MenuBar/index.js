@@ -14,6 +14,12 @@ const Toolbar = styled.div`
 const Title = styled.h1`
   color: black;
   font-family: AltaRegular, serif;
+  @media (max-width: 374px) {
+    font-size: 1.3em;
+  }
+  @media (min-width: 375px) and (max-width: 450px) {
+    font-size: 1.5em;
+  }
 `
 const NavBar = styled.div`
   background-color: white;

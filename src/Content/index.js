@@ -4,14 +4,16 @@ const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: Calc(100vh - 118px);
+  height: Calc(100vh - 148px);
   flex-direction: column;
+  padding: 15px;
+  max-width: 100%;
 `
 const Title = styled.h1`
-  
+  font-family: AltaRegular, sans-serif;
 `
 const Caption = styled.p`
-  
+  text-align: center;
 `
 
 const Content = () => {
