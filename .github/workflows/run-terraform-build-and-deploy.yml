@@ -38,12 +38,9 @@ jobs:
       - name: run test command
         run: npm run test
 
-      - name: run update version
+      - name: run update version (nonprod)
         run: npm version patch --no-git-tag-version
-
-#      - name: run update version (nonprod)
-#        run: npm version patch --no-git-tag-version
-#        if: inputs.DEPLOY_ENV != 'prod'
+        if: inputs.DEPLOY_ENV != 'prod'
 #
 #      - name: run update version (prod)
 #        run: npm version patch
