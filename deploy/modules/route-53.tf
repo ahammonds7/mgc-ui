@@ -1,5 +1,5 @@
 data "aws_route53_zone" "mgc-ui_zone" {
-  name = local.domain_name
+  name = local.root_domain_name
 }
 
 resource "aws_route53_record" "mgc-ui_record_A" {
