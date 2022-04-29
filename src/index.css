@@ -33,3 +33,67 @@ code {
     url('./fonts/Alta/Alta_caption.otf') format('truetype');
   font-weight: auto;
 }
+
+@font-face {
+  font-family: LexendMegaBlack;
+  src: local('LexendMega-Black.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Black.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaBold;
+  src: local('LexendMega-Bold.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Bold.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaExtraBold;
+  src: local('LexendMega-ExtraBold.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-ExtraBold.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaExtraLight;
+  src: local('LexendMega-ExtraLight.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-ExtraLight.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaLight;
+  src: local('LexendMega-Light.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Light.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaMedium;
+  src: local('LexendMega-Medium.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Medium.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaRegular;
+  src: local('LexendMega-Regular.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Regular.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaSemiBold;
+  src: local('LexendMega-SemiBold.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-SemiBold.ttf') format('truetype');
+  font-weight: auto;
+}
+
+@font-face {
+  font-family: LexendMegaThin;
+  src: local('LexendMega-Thin.ttf'),
+    url('./fonts/Lexend_Mega/static/LexendMega-Thin.ttf') format('truetype');
+  font-weight: auto;
+}
+

@@ -14,7 +14,6 @@ const Toolbar = styled.div`
   justify-content: center;
 `
 const Title = styled.h1`
-  color: black;
   font-family: AltaRegular, serif;
   @media (max-width: 374px) {
     font-size: 1.3em;
@@ -25,12 +24,17 @@ const Title = styled.h1`
 `
 const NavBar = styled.div`
   background-color: white;
-  color: black;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
+`
+
+const NavLinkItems = styled(CleanLink)`
+  font-family: LexendMegaRegular, sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
 `
 
 const MenuBar = () => {
@@ -42,9 +46,9 @@ const MenuBar = () => {
         </CleanLink>
       </Toolbar>
       <NavBar>
-        <CleanLink to={homeRoute}>Home</CleanLink>
-        <CleanLink to={productsRoute}>Products</CleanLink>
-        <CleanLink to={aboutUsRoute}>About Us</CleanLink>
+        <NavLinkItems to={homeRoute}>Home</NavLinkItems>
+        <NavLinkItems to={productsRoute}>Products</NavLinkItems>
+        <NavLinkItems to={aboutUsRoute}>About Us</NavLinkItems>
       </NavBar>
     </AppBar>
   </>)

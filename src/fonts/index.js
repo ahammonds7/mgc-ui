@@ -1,3 +1,13 @@
 import './Alta/Alta_regular.otf'
 import './Alta/Alta_caption.otf'
 import './Alta/Alta_light.otf'
+
+import './Lexend_Mega/static/LexendMega-Black.ttf'
+import './Lexend_Mega/static/LexendMega-Bold.ttf'
+import './Lexend_Mega/static/LexendMega-ExtraBold.ttf'
+import './Lexend_Mega/static/LexendMega-ExtraLight.ttf'
+import './Lexend_Mega/static/LexendMega-Light.ttf'
+import './Lexend_Mega/static/LexendMega-Medium.ttf'
+import './Lexend_Mega/static/LexendMega-Regular.ttf'
+import './Lexend_Mega/static/LexendMega-SemiBold.ttf'
+import './Lexend_Mega/static/LexendMega-Thin.ttf'
