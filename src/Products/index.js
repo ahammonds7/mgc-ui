@@ -6,9 +6,6 @@ import Product from "./Product";
 const Title = styled.h1`
   font-family: AltaRegular, sans-serif;
 `
-const Caption = styled.p`
-  text-align: center;
-`
 
 const Products = () => {
   return (<>
