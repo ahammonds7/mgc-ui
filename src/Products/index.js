@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 import Main from "../common/Main";
+import data from '../products-data.json'
+import Product from "./Product";
 
 const Title = styled.h1`
   font-family: AltaRegular, sans-serif;
@@ -12,7 +14,7 @@ const Products = () => {
   return (<>
     <Main>
       <Title>Welcome!</Title>
-      <Caption>This will be the product page!</Caption>
+      { data.products.map(props => <Product {...props} />) }
     </Main>
   </>)
 }

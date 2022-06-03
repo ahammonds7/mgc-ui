@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "Magnolia Grove",
+      "productCode": "magnolia-grove",
+      "scents": "Magnolia, Peony, Sandalwood"
+    },
+    {
+      "name": "The Rugged Cross",
+      "productCode": "the-rugged-cross",
+      "scents": "Bergamot, Mahogany, Musk"
+    },
+    {
+      "name": "Book of He-Brews",
+      "productCode": "book-of-he-brews",
+      "scents": "Decadent Chocolate, Rich Coffee, Cocoa Butter"
+    },
+    {
+      "name": "Alabaster Jar",
+      "productCode": "alabaster-jar",
+      "scents": "Sheer Vanilla, Cashmere"
+    },
+    {
+      "name": "St. Andrews Picnic",
+      "productCode": "st-andrews-picnic",
+      "scents": "Cotton Candy, Buttery Maple, Creamed Vanilla"
+    },
+    {
+      "name": "Fruit of the Spirit",
+      "productCode": "fruit-of-the-spirit",
+      "scents": "Sweet Orange, Tangy Cherry, Vanilla Sandalwood"
+    },
+    {
+      "name": "White Tea",
+      "productCode": "white-tea",
+      "scents": "Mandarin, Bergamot, White Tea"
+    },
+    {
+      "name": "Coconut Dreams",
+      "productCode": "coconut-dreams",
+      "scents": "Coconut Milk, Pineapple, Amaretto"
+    }
+  ]
+}

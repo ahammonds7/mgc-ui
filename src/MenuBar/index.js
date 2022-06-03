@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import CleanLink from '../common/CleanLink'
 import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
-import { route as aboutUsRoute } from '../AboutUs'
+import { route as ourMissionRoute } from '../OurMission'
 
 const AppBar = styled(AppBarMui)``
 
@@ -48,7 +48,7 @@ const MenuBar = () => {
       <NavBar>
         <NavLinkItems to={homeRoute}>Home</NavLinkItems>
         <NavLinkItems to={productsRoute}>Products</NavLinkItems>
-        <NavLinkItems to={aboutUsRoute}>About Us</NavLinkItems>
+        <NavLinkItems to={ourMissionRoute}>Our Mission</NavLinkItems>
       </NavBar>
     </AppBar>
   </>)

@@ -21,7 +21,8 @@ const Content = () => {
       <Routes>
         <Route path={homeRoute} element={<Home/>} />
         <Route path={productsRoute} element={<Products/>} />
-        <Route path={aboutUsRoute} element={<AboutUs/>} />
+        <Route path={productRoute} element={<Product/>} />
+        <Route path={ourMissionRoute} element={<OurMission/>} />
       </Routes>
     </RoutesContainer>
     <SiteInfo />
