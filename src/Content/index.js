@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import Home, { route as homeRoute } from "../Home";
 import Products, { route as productsRoute } from "../Products";
-import AboutUs , { route as aboutUsRoute } from "../AboutUs";
+import Product, { route as productRoute } from "../Product";
+import OurMission , { route as ourMissionRoute } from "../OurMission";
 import styled from "@emotion/styled";
 import SiteInfo from "../Home/SiteInfo";
 
