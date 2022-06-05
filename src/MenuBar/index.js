@@ -5,8 +5,11 @@ import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
 import { route as ourMissionRoute } from '../OurMission'
 import { route as candleCareRoute } from '../CandleCare'
+import {NavLink} from "react-router-dom";
 
-const AppBar = styled(AppBarMui)``
+const AppBar = styled(AppBarMui)`
+max-width: 100%;
+`
 
 const Toolbar = styled.div`
   background-color: white;
@@ -27,15 +30,25 @@ const NavBar = styled.div`
   background-color: white;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
 `
 
-const NavLinkItems = styled(CleanLink)`
+const NavLinkItem = styled(CleanLink)`
   font-family: LexendMegaRegular, sans-serif;
   text-transform: uppercase;
   font-size: .9em;
+`
+const NavLinkItemFirst = styled(NavLinkItem)`
+  margin-left: auto;
+  padding-left: 10px;
+`
+const NavLinkItemLast = styled(NavLinkItem)`
+  margin-right: auto;
+  padding-right: 10px;
 `
 
 const MenuBar = () => {
@@ -47,10 +60,10 @@ const MenuBar = () => {
         </CleanLink>
       </Toolbar>
       <NavBar>
-        <NavLinkItems to={homeRoute}>Home</NavLinkItems>
-        <NavLinkItems to={productsRoute}>Products</NavLinkItems>
-        <NavLinkItems to={ourMissionRoute}>Our Mission</NavLinkItems>
-        <NavLinkItems to={candleCareRoute}>Candle Care</NavLinkItems>
+        <NavLinkItemFirst to={homeRoute}>Home</NavLinkItemFirst>
+        <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+        <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
+        <NavLinkItemLast to={candleCareRoute}>Candle&nbsp;Care</NavLinkItemLast>
       </NavBar>
     </AppBar>
   </>)
