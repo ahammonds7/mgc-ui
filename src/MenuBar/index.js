@@ -4,6 +4,7 @@ import CleanLink from '../common/CleanLink'
 import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
 import { route as ourMissionRoute } from '../OurMission'
+import { route as candleCareRoute } from '../CandleCare'
 
 const AppBar = styled(AppBarMui)``
 
@@ -49,6 +50,7 @@ const MenuBar = () => {
         <NavLinkItems to={homeRoute}>Home</NavLinkItems>
         <NavLinkItems to={productsRoute}>Products</NavLinkItems>
         <NavLinkItems to={ourMissionRoute}>Our Mission</NavLinkItems>
+        <NavLinkItems to={candleCareRoute}>Candle Care</NavLinkItems>
       </NavBar>
     </AppBar>
   </>)
