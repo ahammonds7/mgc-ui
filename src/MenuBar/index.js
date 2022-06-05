@@ -5,7 +5,6 @@ import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
 import { route as ourMissionRoute } from '../OurMission'
 import { route as candleCareRoute } from '../CandleCare'
-import {NavLink} from "react-router-dom";
 
 const AppBar = styled(AppBarMui)`
 max-width: 100%;
