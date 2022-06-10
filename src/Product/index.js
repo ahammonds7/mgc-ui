@@ -3,6 +3,8 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Main from "../common/Main";
 import data from '../products-data.json'
+import {squareUrl} from "../config";
+import {Button} from "@mui/material";
 
 const Title = styled.h1`
   font-family: AltaRegular, sans-serif;
@@ -24,6 +26,9 @@ const Product = () => {
     <Main>
       <Title>{currentData.name}</Title>
       <Caption>Scent Notes: {currentData.scents}</Caption>
+      {currentData.link && <a href={`${squareUrl}/product/${currentData.link}`} target="_blank" rel="noreferrer">
+        <Button>Buy Now!</Button>
+      </a>}
     </Main>
   </>)
 }

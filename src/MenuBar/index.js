@@ -5,6 +5,8 @@ import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
 import { route as ourMissionRoute } from '../OurMission'
 import { route as candleCareRoute } from '../CandleCare'
+import {squareUrl, redirectProducts} from "../config";
+import CleanLinkExternal from "../common/CleanLinkExternal";
 
 const AppBar = styled(AppBarMui)`
 max-width: 100%;
@@ -41,6 +43,11 @@ const NavLinkItem = styled(CleanLink)`
   text-transform: uppercase;
   font-size: .9em;
 `
+const NavLinkItemExternal = styled(CleanLinkExternal)`
+  font-family: LexendMegaRegular, sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+`
 const NavLinkItemFirst = styled(NavLinkItem)`
   margin-left: auto;
   padding-left: 10px;
@@ -60,7 +67,11 @@ const MenuBar = () => {
       </Toolbar>
       <NavBar>
         <NavLinkItemFirst to={homeRoute}>Home</NavLinkItemFirst>
-        <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+        {redirectProducts ?
+          <NavLinkItemExternal href={`${squareUrl}/s/shop`} target="_blank" rel="noreferrer" >Products</NavLinkItemExternal>
+          :
+          <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+        }
         <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
         <NavLinkItemLast to={candleCareRoute}>Candle&nbsp;Care</NavLinkItemLast>
       </NavBar>

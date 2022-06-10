@@ -6,6 +6,7 @@ import OurMission, { route as ourMissionRoute } from "../OurMission";
 import CandleCare, { route as candleCareRoute } from "../CandleCare";
 import styled from "@emotion/styled";
 import SiteInfo from "../Home/SiteInfo";
+import {redirectProducts} from "../config";
 
 const Container = styled.div`
   display: flex;
@@ -22,8 +23,12 @@ const Content = () => {
     <RoutesContainer>
       <Routes>
         <Route path={homeRoute} element={<Home/>} />
-        <Route path={productsRoute} element={<Products/>} />
-        <Route path={productRoute} element={<Product/>} />
+        { !redirectProducts &&
+          <>
+          <Route path={productsRoute} element={<Products/>} />
+          <Route path={productRoute} element={<Product/>} />
+          </>
+        }
         <Route path={ourMissionRoute} element={<OurMission/>} />
         <Route path={candleCareRoute} element={<CandleCare/>} />
       </Routes>
