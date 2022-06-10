@@ -4,6 +4,7 @@ import Products, { route as productsRoute } from "../Products";
 import Product, { route as productRoute } from "../Product";
 import OurMission, { route as ourMissionRoute } from "../OurMission";
 import CandleCare, { route as candleCareRoute } from "../CandleCare";
+import Misc, { route as miscRoute } from "../Misc";
 import styled from "@emotion/styled";
 import SiteInfo from "../Home/SiteInfo";
 import {redirectProducts} from "../config";
@@ -31,6 +32,7 @@ const Content = () => {
         }
         <Route path={ourMissionRoute} element={<OurMission/>} />
         <Route path={candleCareRoute} element={<CandleCare/>} />
+        <Route path={miscRoute} element={<Misc/>} />
       </Routes>
     </RoutesContainer>
     <SiteInfo />
