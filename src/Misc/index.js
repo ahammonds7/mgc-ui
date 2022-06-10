@@ -5,10 +5,6 @@ const Title = styled.h1`
   font-family: AltaRegular, sans-serif;
   text-align: center;
 `
-const SubTitle = styled.h3`
-  font-family: LexendMegaRegular, sans-serif;
-  text-transform: uppercase;
-`
 const Caption = styled.div`
   text-align: center;
   max-width: 800px;
