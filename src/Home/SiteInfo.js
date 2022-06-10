@@ -1,12 +1,12 @@
 import styled from '@emotion/styled'
 import {colors} from "../config";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
   gap: 15px;
   width: 100%;
-  margin-top: 15px;
   background-color: ${colors.dark};
   color: ${colors.light};
 `
@@ -25,6 +25,7 @@ const currentYear = (new Date()).getFullYear()
 const SiteInfo = () => {
   return (<>
     <Container>
+      <SocialMediaLinks />
       <Copyright>
         Copyright &copy; {currentYear} Magnolia Grove Creations, LLC. All Rights Reserved
       </Copyright>

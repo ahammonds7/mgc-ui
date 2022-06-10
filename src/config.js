@@ -1,17 +1,18 @@
 const config = {
   colors: {
     primary: '#caa893',
+    primaryDark: '#b69683',
     primaryLight: '#ddbfb1',
     secondary: '#9ba27b',
     secondaryDark: '#4c695b',
     dark: '#424242',
-    light: '#ffffff'
+    light: '#ffffff',
+    shadowLight: '#ece2db',
   },
   size: {
     maxWidth: '1850px'
   },
   squareUrl: 'https://magnolia-grove-creations-llc.square.site',
-  productsUrl: 'https://magnolia-grove-creations-llc.square.site'
 }
 
 export const colors = config.colors

@@ -15,7 +15,7 @@ const Container = styled.div`
 `
 
 const RoutesContainer = styled.div`
-  min-height: Calc(100vh - 165px);
+  min-height: Calc(100vh - 223px);
 `
 
 const Content = () => {
