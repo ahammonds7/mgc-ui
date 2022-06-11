@@ -3,9 +3,15 @@ import styled from "@emotion/styled"
 import CleanLink from '../common/CleanLink'
 import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
-import { route as aboutUsRoute } from '../AboutUs'
+import { route as ourMissionRoute } from '../OurMission'
+import { route as candleCareRoute } from '../CandleCare'
+import { route as miscRoute } from '../Misc'
+import {squareUrl, redirectProducts} from "../config";
+import CleanLinkExternal from "../common/CleanLinkExternal";
 
-const AppBar = styled(AppBarMui)``
+const AppBar = styled(AppBarMui)`
+max-width: 100%;
+`
 
 const Toolbar = styled.div`
   background-color: white;
@@ -14,7 +20,6 @@ const Toolbar = styled.div`
   justify-content: center;
 `
 const Title = styled.h1`
-  color: black;
   font-family: AltaRegular, serif;
   @media (max-width: 374px) {
     font-size: 1.3em;
@@ -25,12 +30,32 @@ const Title = styled.h1`
 `
 const NavBar = styled.div`
   background-color: white;
-  color: black;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 20px;
   padding-bottom: 20px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+`
+
+const NavLinkItem = styled(CleanLink)`
+  font-family: LexendMegaRegular, sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+`
+const NavLinkItemExternal = styled(CleanLinkExternal)`
+  font-family: LexendMegaRegular, sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+`
+const NavLinkItemFirst = styled(NavLinkItem)`
+  margin-left: auto;
+  padding-left: 10px;
+`
+const NavLinkItemLast = styled(NavLinkItem)`
+  margin-right: auto;
+  padding-right: 10px;
 `
 
 const MenuBar = () => {
@@ -42,9 +67,15 @@ const MenuBar = () => {
         </CleanLink>
       </Toolbar>
       <NavBar>
-        <CleanLink to={homeRoute}>Home</CleanLink>
-        <CleanLink to={productsRoute}>Products</CleanLink>
-        <CleanLink to={aboutUsRoute}>About Us</CleanLink>
+        <NavLinkItemFirst to={homeRoute}>Home</NavLinkItemFirst>
+        {redirectProducts ?
+          <NavLinkItemExternal href={`${squareUrl}/s/shop`} target="_blank" rel="noreferrer" >Products</NavLinkItemExternal>
+          :
+          <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+        }
+        <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
+        <NavLinkItem to={candleCareRoute}>Candle&nbsp;Care</NavLinkItem>
+        <NavLinkItemLast to={miscRoute}>Misc.</NavLinkItemLast>
       </NavBar>
     </AppBar>
   </>)

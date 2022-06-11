@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled from '@emotion/styled'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
+import { colors } from './config'
+
+const AppStyled = styled(App)`
+  color: ${colors.dark};
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppStyled />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

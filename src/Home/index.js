@@ -1,18 +1,14 @@
-import styled from '@emotion/styled'
 import Main from "../common/Main";
-
-const Title = styled.h1`
-  font-family: AltaRegular, sans-serif;
-`
-const Caption = styled.p`
-  text-align: center;
-`
+import PrimaryPhoto from "./PrimaryPhoto";
+import HomeContent from "./HomeContent";
+// import Categories from "./Categories";
 
 const Home = () => {
   return (<>
     <Main>
-      <Title>Welcome!</Title>
-      <Caption>We are excited to be sharing some awesome products soon!</Caption>
+      <PrimaryPhoto />
+      {/*<Categories />*/}
+      <HomeContent />
     </Main>
   </>)
 }
