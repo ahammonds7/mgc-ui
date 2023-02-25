@@ -12,7 +12,7 @@ import candleBar from './slider-images/top/candle-bar.png'
 
 const carouselSettings = {
   showThumbs: false,
-  autoPlay: false,
+  autoPlay: true,
   infiniteLoop: true,
   interval: 4000,
   showStatus: false,
