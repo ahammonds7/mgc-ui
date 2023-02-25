@@ -5,6 +5,7 @@ import allProducts from './slider-images/top/all-products.jpg'
 import signatureCandles from './slider-images/top/signature-candle.jpg'
 import moreProducts from './slider-images/top/more-products.jpg'
 import waxMelts from './slider-images/top/wax-melts.jpg'
+import candleBar from './slider-images/top/candle-bar.png'
 
 const carouselSettings = {
   showThumbs: false,
@@ -15,16 +16,19 @@ const carouselSettings = {
   stopOnHover: false
 }
 
+const images = [
+  candleBar,
+  allProducts,
+  signatureCandles,
+  moreProducts,
+  waxMelts,
+]
+
 const PrimaryPhoto = () => {
   return (<>
     <Carousel {...carouselSettings}>
       {
-        [
-          allProducts,
-          signatureCandles,
-          moreProducts,
-          waxMelts,
-        ]
+        images
         .map(image => (
           <div>
             <img src={image}  alt=''/>
