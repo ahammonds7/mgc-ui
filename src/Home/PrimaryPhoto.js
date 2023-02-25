@@ -1,5 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import { route as candleBarRoute } from '../CandleBar/index';
+import { useNavigate } from 'react-router-dom'
+import imgOnClickNavigate from './img-on-click-navigate'
 
 import allProducts from './slider-images/top/all-products.jpg'
 import signatureCandles from './slider-images/top/signature-candle.jpg'
@@ -13,25 +16,27 @@ const carouselSettings = {
   infiniteLoop: true,
   interval: 4000,
   showStatus: false,
-  stopOnHover: false
+  stopOnHover: false,
+  onClickItem: imgOnClickNavigate
 }
 
 const images = [
-  candleBar,
-  allProducts,
-  signatureCandles,
-  moreProducts,
-  waxMelts,
+  { image: candleBar, link: candleBarRoute },
+  { image: allProducts },
+  { image: signatureCandles },
+  { image: moreProducts },
+  { image: waxMelts },
 ]
 
 const PrimaryPhoto = () => {
+  const navigate = useNavigate()
   return (<>
     <Carousel {...carouselSettings}>
       {
         images
-        .map(image => (
-          <div>
-            <img src={image}  alt=''/>
+        .map(({ image, link }) => (
+          <div {...{ navigate, link }}>
+            <img src={image} alt=''/>
           </div>
         ))
       }
