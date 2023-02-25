@@ -13,9 +13,14 @@ const config = {
     maxWidth: '1850px'
   },
   squareUrl: 'https://magnolia-grove-creations-llc.square.site',
+  contact: {
+    phone: '3146264312',
+    email: 'magnoliagrovecreations123@gmail.com'
+  }
 }
 
 export const colors = config.colors
 export const size = config.size
 export const squareUrl = config.squareUrl
 export const redirectProducts = process.env.REDIRECT_PRODUCTS == null ? true : process.env.REDIRECT_PRODUCTS
+export const contact = config.contact

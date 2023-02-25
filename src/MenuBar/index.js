@@ -4,6 +4,7 @@ import CleanLink from '../common/CleanLink'
 import { route as homeRoute } from '../Home'
 import { route as productsRoute } from '../Products'
 import { route as ourMissionRoute } from '../OurMission'
+import { route as candleBarRoute } from '../CandleBar'
 import { route as candleCareRoute } from '../CandleCare'
 import { route as miscRoute } from '../Misc'
 import {squareUrl, redirectProducts} from "../config";
@@ -74,6 +75,7 @@ const MenuBar = () => {
           <NavLinkItem to={productsRoute}>Products</NavLinkItem>
         }
         <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
+        <NavLinkItem to={candleBarRoute}>Candle&nbsp;Bar</NavLinkItem>
         <NavLinkItem to={candleCareRoute}>Candle&nbsp;Care</NavLinkItem>
         <NavLinkItemLast to={miscRoute}>Misc.</NavLinkItemLast>
       </NavBar>
