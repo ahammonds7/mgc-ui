@@ -2,6 +2,7 @@ const config = {
   colors: {
     primary: '#caa893',
     primaryDark: '#b69683',
+    primaryDarkHover: '#9d8171',
     primaryLight: '#ddbfb1',
     secondary: '#9ba27b',
     secondaryDark: '#4c695b',
