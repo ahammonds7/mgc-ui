@@ -27,6 +27,10 @@ const Caption = styled.div`
   text-align: center;
 `
 
+const Ul = styled.ul`
+  list-style-type: none;
+`
+
 const CandleBar = () => {
   return (<>
     <Main>
@@ -39,12 +43,13 @@ const CandleBar = () => {
         <p>Mix <strong>YOUR OWN</strong> custom scent</p>
         <BookingPopup/>
         <SubTitle>The Details</SubTitle>
-        <ul>
+        <Ul>
           <li>Prices start at $35 per person</li>
           <li>Parties of 6-10 people at a time</li>
-          <li>Each pouring cession lasts approx. 45min</li>
+          <li>Each pouring session lasts approx. 45min</li>
+          <li>3685 W Outer Rd Suite 4, Arnold, MO 63010</li>
           {/*<li><a href={`tel:${contact.phone}`}>Call</a>, <a href={`sms:${contact.phone}`}>Text</a> or <a href={`mailto:${contact.email}`}>Email</a> today for an appointment!</li>*/}
-        </ul>
+        </Ul>
         <small>*Ages 12 and up only (no&nbsp;children&nbsp;under&nbsp;5&nbsp;allowed&nbsp;in&nbsp;Studio)</small>
       </Caption>
     </Main>
