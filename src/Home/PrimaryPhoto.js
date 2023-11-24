@@ -9,6 +9,7 @@ import signatureCandles from './slider-images/top/signature-candle.jpg'
 import moreProducts from './slider-images/top/more-products.jpg'
 import waxMelts from './slider-images/top/wax-melts.jpg'
 import candleBar from './slider-images/top/candle-bar.png'
+import {candleBarEnabled} from "../config";
 
 const carouselSettings = {
   showThumbs: false,
@@ -21,7 +22,7 @@ const carouselSettings = {
 }
 
 const images = [
-  { image: candleBar, link: candleBarRoute },
+  { image: candleBar, enabled: candleBarEnabled, link: candleBarRoute },
   { image: allProducts },
   { image: signatureCandles },
   { image: moreProducts },
@@ -34,6 +35,7 @@ const PrimaryPhoto = () => {
     <Carousel {...carouselSettings}>
       {
         images
+        .filter(({ enabled }) => enabled == null || enabled === true)
         .map(({ image, link }) => (
           <div {...{ navigate, link }}>
             <img src={image} alt=''/>

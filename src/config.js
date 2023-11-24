@@ -25,3 +25,4 @@ export const size = config.size
 export const squareUrl = config.squareUrl
 export const redirectProducts = process.env.REDIRECT_PRODUCTS == null ? true : process.env.REDIRECT_PRODUCTS
 export const contact = config.contact
+export const candleBarEnabled = window.CANDLE_BAR_ENABLED = false

@@ -8,7 +8,7 @@ import CandleCare, { route as candleCareRoute } from "../CandleCare";
 import Misc, { route as miscRoute } from "../Misc";
 import styled from "@emotion/styled";
 import SiteInfo from "../Home/SiteInfo";
-import {redirectProducts} from "../config";
+import {candleBarEnabled, redirectProducts} from "../config";
 
 const Container = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ const Content = () => {
           </>
         }
         <Route path={ourMissionRoute} element={<OurMission/>} />
-        <Route path={candleBarRoute} element={<CandleBar/>} />
+        { candleBarEnabled && <Route path={candleBarRoute} element={<CandleBar/>} /> }
         <Route path={candleCareRoute} element={<CandleCare/>} />
         <Route path={miscRoute} element={<Misc/>} />
       </Routes>
