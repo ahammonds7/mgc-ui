@@ -26,6 +26,11 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = local.s3_origin_id
 
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.lambda-router.arn
+    }
+
     forwarded_values {
       query_string = false
 

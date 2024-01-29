@@ -12,6 +12,10 @@ variable "URL_PREFIX" {
 
 locals {
   s3_origin_id = "mgc-ui-origin-id"
-  root_domain_name = "magnoliagrovecreations.com"
+  root_domain_name = "magnoliagrovecollective.com"
+  other_root_domain_names = [
+    "magnoliagrovecreations.com",
+    "magnoliagrovecandle.com"
+  ]
   domain_name = "${var.URL_PREFIX}${local.root_domain_name}"
 }
