@@ -1,13 +1,23 @@
-let mainHost = 'magnoliagrovecollective.com'
+var mainHost = 'magnoliagrovecollective.com'
 
 function handler(event) {
-  let request = event.request;
-  let host = request.headers.host.value;
-  let path = request.uri
+  var request = event.request;
+  var host = request.headers.host.value;
+  var path = request.uri
+
+  // magnoliagrovecollective.com
+  // qa.magnoliagrovecollective.com
 
   if (!host.includes(mainHost)) {
-    let subdomain = host.split('.')[0] === mainHost ? '' : `${host.split('.')[0]}.`
-    let response = {
+    var subdomain = ''
+    
+    var urlParts = host.split('.')
+    if (urlParts.length >= 3) {
+      urlParts.splice(-2)
+      subdomain = `${urlParts.join('.')}.`
+    }
+    
+    var response = {
       statusCode: 301,
       statusDescription: 'Moved Permanently',
       headers:
