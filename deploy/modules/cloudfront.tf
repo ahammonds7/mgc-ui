@@ -14,7 +14,11 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
 
   aliases = [
     local.domain_name,
-    "www.${local.domain_name}"
+    "www.${local.domain_name}",
+    local.other_root_domain_names[0],
+    "www.${local.other_root_domain_names[0]}",
+    local.other_root_domain_names[1],
+    "www.${local.other_root_domain_names[1]}"
   ]
 
   enabled             = true
