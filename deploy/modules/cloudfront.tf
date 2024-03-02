@@ -13,8 +13,12 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
   }
 
   aliases = [
-    local.domain_name,
-    "www.${local.domain_name}"
+    local.domain_names[0],
+    "www.${local.domain_names[0]}",
+    local.domain_names[1],
+    "www.${local.domain_names[1]}",
+    local.domain_names[2],
+    "www.${local.domain_names[2]}"
   ]
 
   enabled             = true
@@ -25,6 +29,11 @@ resource "aws_cloudfront_distribution" "mgc-ui_distribution" {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = local.s3_origin_id
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.lambda-router.arn
+    }
 
     forwarded_values {
       query_string = false
