@@ -18,4 +18,9 @@ locals {
     "magnoliagrovecandle.com"
   ]
   domain_name = "${var.URL_PREFIX}${local.root_domain_name}"
+  domain_names = [
+    local.domain_name,
+    "${var.URL_PREFIX}${local.other_root_domain_names[0]}",
+    "${var.URL_PREFIX}${local.other_root_domain_names[1]}",
+  ]
 }
