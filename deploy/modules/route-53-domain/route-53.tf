@@ -28,6 +28,6 @@ resource "aws_route53_record" "mgc-ui_record_CNAME" {
   zone_id = data.aws_route53_zone.mgc-ui_zone.zone_id
   name    = "www"
   type    = "CNAME"
-
-  records        = [var.fqdn]
+  ttl     = 60
+  records = [var.fqdn]
 }
