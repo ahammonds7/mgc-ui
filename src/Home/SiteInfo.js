@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import {colors} from "../config";
+import { colors } from "../config";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const Container = styled.div`
@@ -27,7 +27,7 @@ const SiteInfo = () => {
     <Container>
       <SocialMediaLinks />
       <Copyright>
-        Copyright &copy; {currentYear} Magnolia Grove Creations, LLC. All Rights Reserved
+        Copyright &copy; {currentYear} Magnolia Grove Collective, LLC. All Rights Reserved
       </Copyright>
     </Container>
   </>);
