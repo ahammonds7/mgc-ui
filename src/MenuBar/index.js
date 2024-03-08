@@ -7,7 +7,7 @@ import { route as ourMissionRoute } from '../OurMission'
 import { route as candleBarRoute } from '../CandleBar'
 import { route as candleCareRoute } from '../CandleCare'
 import { route as miscRoute } from '../Misc'
-import {squareUrl, redirectProducts, candleBarEnabled} from "../config";
+import { squareUrl, redirectProducts, candleBarEnabled } from "../config";
 import CleanLinkExternal from "../common/CleanLinkExternal";
 
 const AppBar = styled(AppBarMui)`
@@ -64,7 +64,7 @@ const MenuBar = () => {
     <AppBar position={'static'}>
       <Toolbar>
         <CleanLink to={homeRoute}>
-          <Title>Magnolia Grove Creations</Title>
+          <Title>Magnolia Grove Collections</Title>
         </CleanLink>
       </Toolbar>
       <NavBar>
@@ -75,7 +75,7 @@ const MenuBar = () => {
           <NavLinkItem to={productsRoute}>Products</NavLinkItem>
         }
         <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
-        { candleBarEnabled && <NavLinkItem to={candleBarRoute}>Candle&nbsp;Bar</NavLinkItem> }
+        {candleBarEnabled && <NavLinkItem to={candleBarRoute}>Candle&nbsp;Bar</NavLinkItem>}
         <NavLinkItem to={candleCareRoute}>Candle&nbsp;Care</NavLinkItem>
         <NavLinkItemLast to={miscRoute}>Misc.</NavLinkItemLast>
       </NavBar>
