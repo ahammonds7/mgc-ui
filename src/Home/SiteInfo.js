@@ -27,7 +27,7 @@ const SiteInfo = () => {
     <Container>
       <SocialMediaLinks />
       <Copyright>
-        Copyright &copy; {currentYear} Magnolia Grove Collections, LLC. All Rights Reserved
+        Copyright &copy; {currentYear} Magnolia Grove Collective, LLC. All Rights Reserved
       </Copyright>
     </Container>
   </>);

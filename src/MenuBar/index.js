@@ -64,7 +64,7 @@ const MenuBar = () => {
     <AppBar position={'static'}>
       <Toolbar>
         <CleanLink to={homeRoute}>
-          <Title>Magnolia Grove Collections</Title>
+          <Title>Magnolia Grove Collective</Title>
         </CleanLink>
       </Toolbar>
       <NavBar>
