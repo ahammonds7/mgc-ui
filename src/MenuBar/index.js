@@ -7,7 +7,7 @@ import { route as ourMissionRoute } from '../OurMission'
 import { route as candleBarRoute } from '../CandleBar'
 import { route as candleCareRoute } from '../CandleCare'
 import { route as miscRoute } from '../Misc'
-import { squareUrl, redirectProducts, candleBarEnabled } from "../config";
+import {squareUrl, redirectProducts, candleBarEnabled, tempClosedEnabled} from "../config";
 import CleanLinkExternal from "../common/CleanLinkExternal";
 
 const AppBar = styled(AppBarMui)`
@@ -69,10 +69,14 @@ const MenuBar = () => {
       </Toolbar>
       <NavBar>
         <NavLinkItemFirst to={homeRoute}>Home</NavLinkItemFirst>
-        {redirectProducts ?
-          <NavLinkItemExternal href={`${squareUrl}/s/shop`} target="_blank" rel="noreferrer" >Products</NavLinkItemExternal>
-          :
-          <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+        { tempClosedEnabled && <NavLinkItem onClick={() => alert('We are temporarily not accepting orders.')}>Products</NavLinkItem> }
+        {
+          !tempClosedEnabled &&
+          (redirectProducts ?
+            <NavLinkItemExternal href={`${squareUrl}/s/shop`} target="_blank" rel="noreferrer" >Products</NavLinkItemExternal>
+            :
+            <NavLinkItem to={productsRoute}>Products</NavLinkItem>
+          )
         }
         <NavLinkItem to={ourMissionRoute}>Our&nbsp;Mission</NavLinkItem>
         {candleBarEnabled && <NavLinkItem to={candleBarRoute}>Candle&nbsp;Bar</NavLinkItem>}
